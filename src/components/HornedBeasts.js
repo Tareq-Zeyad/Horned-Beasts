@@ -37,7 +37,9 @@ class HornedBeasts extends React.Component {
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
-                            votes 💖: {this.state.votes};
+                            votes 💖: {this.state.votes}
+                            <br></br>
+                            {this.props.description};
                         </Card.Text>
                         <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
