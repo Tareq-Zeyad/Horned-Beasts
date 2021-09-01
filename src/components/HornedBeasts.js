@@ -18,6 +18,9 @@ class HornedBeasts extends React.Component {
         this.setState({
             votes: this.state.votes + 1
         })
+        this.props.handleShow();
+        this.props.updateSelectedBeastsData(this.props.title, this.props.src, this.props.description);
+
 
     }
 
@@ -32,7 +35,7 @@ class HornedBeasts extends React.Component {
 
 
                 <Card style={{ width: '15rem' }}>
-                    <Card.Img variant="top" src={this.props.img} onClick={this.incrementNumberOfVotes} />
+                    <Card.Img variant="top" src={this.props.src} onClick={this.incrementNumberOfVotes} />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>

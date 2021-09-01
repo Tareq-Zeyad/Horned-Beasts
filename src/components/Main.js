@@ -9,12 +9,14 @@ class Main extends React.Component {
         return (
             <>
             <div style={{display:'flex' , flexFlow:'row' , flexWrap:'wrap' , padding:'4rem'}}>
-                {this.props.Gallery.map (item => {
+                {this.props.Data.map (item => {
                     return(
                         <HornedBeasts
                         title={item.title}
-                        img={item.image_url}
+                        src={item.image_url}
                         description={item.description}
+                        handleShow={this.props.handleShow}
+                        updateSelectedBeastsData={this.props.updateSelectedBeastsData}
                         />
                     )
                 })
